@@ -13,6 +13,10 @@ const app = express();
 app.use(morgan('dev'));
 
 // ROUTES
+app.get("/fruits/new", (req, res) => {
+    res.render("fruits/new.ejs");
+});
+
 app.get("/", async (req, res) => {
     res.render("index.ejs");
 });
